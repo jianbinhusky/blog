@@ -12,7 +12,7 @@ tags: hexo,Jenkins,github
 
 
 ### Jenkins Console Log
-```Java
+```Javascript
 Started by GitHub push by jianbinhusky
 Building in workspace /var/lib/jenkins/workspace/blog
  > /usr/bin/git rev-parse --is-inside-work-tree # timeout=10
