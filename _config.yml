@@ -4,7 +4,7 @@
 
 # Site
 title: 古月的博客
-subtitle: 木杉sky
+subtitle: 木杉sky佥刂
 description: 中年油腻90后
 author: jianbinhusky
 language:
@@ -100,7 +100,7 @@ jsonContent:
     path: true
     text: false
     raw: false
-    content: false
+    content: true
     slug: false
     updated: false
     comments: false
