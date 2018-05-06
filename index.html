@@ -186,7 +186,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -196,7 +196,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            About
+            Über
           </a>
         </li>
       
@@ -216,7 +216,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Categories
+            Kategorien
           </a>
         </li>
       
@@ -226,7 +226,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -292,7 +292,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-06T21:55:34+08:00">
                 2018-05-06
@@ -313,12 +313,12 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/杂陈/" itemprop="url" rel="index">
-                    <span itemprop="name">-杂陈</span>
+                    <span itemprop="name">杂陈</span>
                   </a>
                 </span>
 
@@ -358,13 +358,11 @@
           
             <h3 id="拥有一个能在国外上网的虚拟主机"><a href="#拥有一个能在国外上网的虚拟主机" class="headerlink" title="拥有一个能在国外上网的虚拟主机"></a>拥有一个能在国外上网的虚拟主机</h3><blockquote>
 <p><a href="http://hostdare.com/" target="_blank" rel="noopener">目前在用的虚拟主机提供商Hostdare&gt;&gt;&gt;</a></p>
-<h3 id="Ubuntu16-04下安装Shadowsocks服务"><a href="#Ubuntu16-04下安装Shadowsocks服务" class="headerlink" title="Ubuntu16.04下安装Shadowsocks服务"></a>Ubuntu16.04下安装Shadowsocks服务</h3></blockquote>
-<h4 id="通过Pip安装Shadowsocks"><a href="#通过Pip安装Shadowsocks" class="headerlink" title="通过Pip安装Shadowsocks"></a>通过Pip安装Shadowsocks</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python3-pip -y</span><br><span class="line">sudo pip3 install https://github.com/shadowsocks/shadowsocks/archive/master.zip</span><br><span class="line">sudo ssserver --version</span><br><span class="line">sudo mkdir /etc/shadowsocks</span><br><span class="line">cd /etc/shadowsocks</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="Ubuntu16-04下安装Shadowsocks服务"><a href="#Ubuntu16-04下安装Shadowsocks服务" class="headerlink" title="Ubuntu16.04下安装Shadowsocks服务"></a>Ubuntu16.04下安装Shadowsocks服务</h3><h4 id="通过Pip安装Shadowsocks"><a href="#通过Pip安装Shadowsocks" class="headerlink" title="通过Pip安装Shadowsocks"></a>通过Pip安装Shadowsocks</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python3-pip -y</span><br><span class="line">sudo pip3 install https://github.com/shadowsocks/shadowsocks/archive/master.zip</span><br><span class="line">sudo ssserver --version</span><br><span class="line">sudo mkdir /etc/shadowsocks</span><br><span class="line">cd /etc/shadowsocks</span><br></pre></td></tr></table></figure>
 <h4 id="配置Shadowsocks服务连接信息"><a href="#配置Shadowsocks服务连接信息" class="headerlink" title="配置Shadowsocks服务连接信息"></a>配置Shadowsocks服务连接信息</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">echo -e "&#123;" &gt; config.json</span><br><span class="line">echo -e "\t\"server\":\"2xx.9x.3x.2xx\"," &gt;&gt; config.json</span><br><span class="line">echo -e "\t\"server_port\":8x8x," &gt;&gt; config.json</span><br><span class="line">echo -e "\t\"local_address\":\"127.0.0.1\"," &gt;&gt; config.json</span><br><span class="line">echo -e "\t\"local_port\":1080," &gt;&gt; config.json</span><br><span class="line">echo -e "\t\"password\":\"yourpasswd\"," &gt;&gt; config.json</span><br><span class="line">echo -e "\t\"timeout\":300," &gt;&gt; config.json</span><br><span class="line">echo -e "\t\"method\":\"aes-256-cfb\"," &gt;&gt; config.json</span><br><span class="line">echo -e "\t\"fast_open\":false" &gt;&gt; config.json</span><br><span class="line">echo -e "&#125;" &gt;&gt; config.json</span><br></pre></td></tr></table></figure>
 <h4 id="配置Systemd管理Shadowsocks"><a href="#配置Systemd管理Shadowsocks" class="headerlink" title="配置Systemd管理Shadowsocks"></a>配置Systemd管理Shadowsocks</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">echo "[Unit]" &gt; /etc/systemd/system/shadowsocks-server.service</span><br><span class="line">echo "Description=Shadowsocks Server" &gt;&gt; /etc/systemd/system/shadowsocks-server.service</span><br><span class="line">echo "After=network.target" &gt;&gt; /etc/systemd/system/shadowsocks-server.service</span><br><span class="line">echo "[Service]" &gt;&gt; /etc/systemd/system/shadowsocks-server.service</span><br><span class="line">echo "ExecStart=/usr/local/bin/ssserver -c /etc/shadowsocks/config.json" &gt;&gt; /etc/systemd/system/shadowsocks-server.service</span><br><span class="line">echo "Restart=on-abort" &gt;&gt; /etc/systemd/system/shadowsocks-server.service</span><br><span class="line">echo "[Install]" &gt;&gt; /etc/systemd/system/shadowsocks-server.service</span><br><span class="line">echo "WantedBy=multi-user.target" &gt;&gt; /etc/systemd/system/shadowsocks-server.service</span><br></pre></td></tr></table></figure>
-<h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><blockquote>
-<p>sudo systemctl enable shadowsocks-server<br>sudo systemctl start shadowsocks-server</p>
-</blockquote>
+<h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable shadowsocks-server</span><br><span class="line">sudo systemctl start shadowsocks-server</span><br></pre></td></tr></table></figure>
 <h3 id="下载安装Shadowsocks客户端"><a href="#下载安装Shadowsocks客户端" class="headerlink" title="下载安装Shadowsocks客户端"></a>下载安装Shadowsocks客户端</h3><h4 id="下载对应版本的客户端"><a href="#下载对应版本的客户端" class="headerlink" title="下载对应版本的客户端"></a>下载对应版本的客户端</h4><blockquote>
 <p>搜集了Mac/Win/Android版客户端</p>
 </blockquote>
@@ -451,7 +449,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -462,7 +460,7 @@
               <div class="site-state-item site-state-categories">
                 
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">categories</span>
+                  <span class="site-state-item-name">Kategorien</span>
                 
               </div>
             
@@ -473,7 +471,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">Tags</span>
                 
               </div>
             
@@ -528,7 +526,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
